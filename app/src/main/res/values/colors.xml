@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="blue_primary">#19209A</color>
+    <color name="blue_hint">#435AD9</color>
+    <color name="light_blue">#6A70E5</color>
+    <color name="redCommuter">#BD1111</color>
+    <color name="blue_bg">#1B21A6</color>
+    <color name="black1">#0D0D0D</color>
+    <color name="nowhite">#F4F3F3</color>
+    <color name="gray">#BDBDBD</color>
+    <color name="grayborder">#969696</color>
+    <color name="creambox">#FFE3E4</color>
+    <color name="softgray">#F3F3F3</color>
+    <color name="backgroundblue">#F5F6FF</color>
+    <color name="green">#2FA742</color>
+    <color name="bluehinttext">#0A72ED</color>
+    <color name="error">#DE1306</color>
+    <color name="statusBlue">#0347C8</color>
+    <color name="blueTimer">#0A72ED</color>
+    <color name="feeder">#FF6B00</color>
+    <color name="graytext">#727272</color>
+    <color name="softYellow">#FEF0CE</color>
+    <color name="yellow">#FFB100</color>
+    <color name="warning">#F3DB00</color>
+    <color name="secondblack">#292424</color>
+    <color name="graytwo">#5F5F5F</color>
+    <color name="gras">#2E3C40</color>
+    <color name="cream">#E3656A</color>
+    <color name="orangeFacilities">#EAB22C</color>
+    <color name="redFacilities">#BD1111</color>
+    <color name="categoryMember">#6A70E5</color>
+    <color name="greenFacilities">#39BE0A</color>
+    <color name="navyFacilities">#1847B0</color>
+    <color name="mintFacilities">#36C1A4</color>
+    <color name="grayFacilities">#B0ADAD</color>
+    <color name="greenKRL">#16812B</color>
+    <color name="redLine">#A50505</color>
+    <color name="line">#E7E7E7</color>
+</resources>
