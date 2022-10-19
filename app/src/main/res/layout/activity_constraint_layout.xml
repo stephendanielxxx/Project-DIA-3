@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".ConstraintLayoutActivity">
+    tools:context=".ui.activity.ConstraintLayoutActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl1"
@@ -78,6 +78,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cl6" />
 
+    <Button
+        android:id="@+id/btnFragment"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Pindah ke Fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnChangeActivity" />
+
+    <Button
+        android:id="@+id/btnBottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Pindah ke Bottom Navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnFragment" />
+
     <ImageView
         android:id="@+id/ivHome"
         android:layout_width="100dp"
@@ -87,7 +107,7 @@
         android:src="@drawable/bakso"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnChangeActivity"/>
+        app:layout_constraintTop_toBottomOf="@id/btnBottom"/>
 
 
 
