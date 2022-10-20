@@ -40,5 +40,15 @@ class ConstraintLayoutActivity : AppCompatActivity() {
             val intent = Intent(this@ConstraintLayoutActivity, MainActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnRandomAnimal.setOnClickListener {
+            val intent = Intent(this@ConstraintLayoutActivity, RandomAnimalActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnRandomAnimals.setOnClickListener {
+            val intent = Intent(this@ConstraintLayoutActivity, RandomAnimalsActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

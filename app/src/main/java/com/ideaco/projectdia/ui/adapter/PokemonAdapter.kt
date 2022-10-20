@@ -2,23 +2,42 @@ package com.ideaco.projectdia.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.ideaco.projectdia.databinding.ItemPokemonBinding
 import com.ideaco.projectdia.ui.model.PokemonModel
 
-class PokemonAdapter(private var pokemonList: ArrayList<PokemonModel>): RecyclerView.Adapter<PokemonAdapter.ViewHolder>() {
-    inner class ViewHolder(val binding: ItemPokemonBinding): RecyclerView.ViewHolder(binding.root){
+class PokemonAdapter(private var pokemonList: ArrayList<PokemonModel>) :
+    RecyclerView.Adapter<PokemonAdapter.ViewHolder>() {
 
+    inner class ViewHolder(val binding: ItemPokemonBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        init {
+            binding.root.setOnClickListener {
+                val pokemon = pokemonList[adapterPosition]
+                Toast.makeText(
+                    binding.root.context, "Pokemon Name : ${pokemon.pokemonName}",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(ItemPokemonBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return ViewHolder(
+            ItemPokemonBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val pokemon = pokemonList[position]
-        with(holder){
+        with(holder) {
             binding.tvName.text = pokemon.pokemonName
             // show image from asset drawable
 //            binding.ivPokemon.setImageResource(pokemon.pokemonImage)
