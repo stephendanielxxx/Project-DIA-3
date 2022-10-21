@@ -7,18 +7,19 @@ import com.ideaco.projectdia.data.repository.AnimalRepository
 import com.ideaco.projectdia.data.service.AnimalService
 import com.ideaco.projectdia.retrofit.AnimalRetrofit
 import com.ideaco.projectdia.ui.model.AnimalResponse
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
 
-class RandomAnimalViewModel: ViewModel() {
+@HiltViewModel
+class RandomAnimalViewModel @Inject constructor(
+    private val animalRepository: AnimalRepository
+): ViewModel() {
     private var randomAnimalLiveData = MutableLiveData<AnimalResponse>()
     private val compositeDisposable = CompositeDisposable()
-
-    private var animalService: AnimalService = AnimalRetrofit.animalService
-    private var animalRemoteDataSource: AnimalRemoteDataSource = AnimalRemoteDataSource(animalService)
-    private var animalRepository: AnimalRepository = AnimalRepository(animalRemoteDataSource)
 
     fun getRandomAnimal(){
         compositeDisposable.add(

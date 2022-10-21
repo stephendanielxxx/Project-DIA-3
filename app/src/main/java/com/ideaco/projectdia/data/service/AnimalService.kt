@@ -12,4 +12,8 @@ interface AnimalService {
 
     @GET("/animals/rand/{number}")
     fun getRandomAnimals(@Path("number") number: Int): Single<List<AnimalResponse>>
+
+    //Query
+//    @GET("/animals/rand")
+//    fun getRandomAnimals(@Query("domains") domains: String): Single<List<AnimalResponse>>
 }

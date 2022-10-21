@@ -3,8 +3,11 @@ package com.ideaco.projectdia.data.remote
 import com.ideaco.projectdia.data.service.AnimalService
 import com.ideaco.projectdia.ui.model.AnimalResponse
 import io.reactivex.Single
+import javax.inject.Inject
 
-class AnimalRemoteDataSource(private val animalService: AnimalService) {
+class AnimalRemoteDataSource @Inject constructor(
+    private val animalService: AnimalService
+) {
     //Opsi 1
     fun getRandomAnimal(): Single<AnimalResponse> {
         return animalService.getRandomAnimal()

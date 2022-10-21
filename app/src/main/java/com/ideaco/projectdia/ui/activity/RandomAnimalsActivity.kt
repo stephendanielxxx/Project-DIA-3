@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ideaco.projectdia.databinding.ActivityRandomAnimalsBinding
 import com.ideaco.projectdia.ui.adapter.AnimalAdapter
 import com.ideaco.projectdia.ui.viewmodel.RandomAnimalsViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RandomAnimalsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRandomAnimalsBinding
     private lateinit var adapter: AnimalAdapter

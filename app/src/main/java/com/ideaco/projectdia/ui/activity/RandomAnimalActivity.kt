@@ -7,7 +7,9 @@ import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.ideaco.projectdia.databinding.ActivityRandomAnimalBinding
 import com.ideaco.projectdia.ui.viewmodel.RandomAnimalViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RandomAnimalActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRandomAnimalBinding
     private val viewModel: RandomAnimalViewModel by viewModels()
