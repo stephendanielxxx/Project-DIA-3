@@ -123,6 +123,18 @@
             app:layout_constraintTop_toBottomOf="@id/btnRandomAnimal" />
 
         <Button
+            android:id="@+id/btnFavoriteAnimals"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:text="Favorite Animals"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnRandomAnimals" />
+
+
+
+        <Button
             android:id="@+id/btnVerifyOtp"
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -130,6 +142,6 @@
             android:text="Verify OTP"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnRandomAnimals" />
+            app:layout_constraintTop_toBottomOf="@id/btnFavoriteAnimals" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

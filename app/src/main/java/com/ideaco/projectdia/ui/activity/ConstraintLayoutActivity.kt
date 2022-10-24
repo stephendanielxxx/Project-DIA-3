@@ -55,5 +55,10 @@ class ConstraintLayoutActivity : AppCompatActivity() {
             val intent = Intent(this@ConstraintLayoutActivity, VerifyOtpActivity::class.java)
             startActivity(intent)
         }
+
+        binding.btnFavoriteAnimals.setOnClickListener {
+            val intent = Intent(this@ConstraintLayoutActivity, FavoriteAnimalsActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

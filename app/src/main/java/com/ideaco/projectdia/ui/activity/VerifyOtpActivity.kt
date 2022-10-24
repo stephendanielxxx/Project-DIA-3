@@ -1,5 +1,6 @@
 package com.ideaco.projectdia.ui.activity
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +12,7 @@ import com.ideaco.projectdia.R
 import com.ideaco.projectdia.databinding.ActivityVerifyOtpBinding
 import com.ideaco.projectdia.ui.viewmodel.VerifyOtpViewModel
 import com.ideaco.projectdia.utils.ResponseStatus
+import com.pixplicity.easyprefs.library.Prefs
 import dagger.hilt.android.AndroidEntryPoint
 
 @RequiresApi(Build.VERSION_CODES.M)
@@ -40,9 +42,17 @@ class VerifyOtpActivity : AppCompatActivity() {
         viewModel.getVerifyOtpResponseLiveData().observe(this, Observer {
             when (it.status){
                 ResponseStatus.SUCCESS -> {
+
+                    Prefs.putBoolean("isLogin", true)
+
                     binding.tvStatus.text = "OTP Valid"
                     binding.tvStatus.setTextColor(getColor(R.color.green))
                     binding.tvStatus.visibility = View.VISIBLE
+
+                    val intent = Intent(this@VerifyOtpActivity, ConstraintLayoutActivity::class.java)
+                    startActivity(intent)
+
+                    finish()
                 }
                 ResponseStatus.ERROR -> {
                     binding.tvStatus.text = it.message
